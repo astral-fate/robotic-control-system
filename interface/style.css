@@ -1,0 +1,365 @@
+*{
+    font-family: 'Baloo 2', cursive;
+    box-sizing: border-box;
+}
+/* ------------------------ FLEXBOX ------------------------*/
+.webContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.headerContainer{
+  flex: 1;
+  background-color: rgb(255, 255, 255);
+
+  /*the header is a container for the logo*/
+  display: flex;
+  justify-content: center;
+}
+.footerContainer{
+  flex: 1;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  
+  /*the footer is a container for the text*/
+  display: flex;
+  justify-content: center;
+  
+}
+
+.bodyContainer{
+  flex: 1;
+  background-color: rgb(216, 216, 216);
+
+  /*the body is a container for the 2 cards*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+.rightCard{
+  width :30%;
+
+  /* righ card is a container*/
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  
+}
+
+.rightCardItems{
+  /* rightCardItems will be container*/
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.leftRightBtns{
+  /* to center it*/
+  flex: 1;
+  margin:auto;
+
+  /* leftRightBtns  is a container for the left/right buttons*/
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.leftCard{
+  width :60%;
+
+  /* left card is a container*/
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content:space-around;
+}
+
+.left{
+  width: 65%;
+  padding: 10px;
+
+  
+}
+.right{
+  width: 35%;
+  padding: 10px;
+
+  /* right will be container*/
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+/* small screen */
+@media (max-width:600px) {
+  .bodyContainer{
+      flex: 1;
+  
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+  }
+
+  .rightCard{
+      width :100%;
+
+      /* righ card is a container*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+  .leftCard{
+      width: 100%;
+
+      /* leftCard will be container*/
+      display: flex;
+      justify-content: space-around;
+      align-items:flex-start;
+      align-content: flex-start;
+      flex-direction: column;
+      
+  }
+
+  .left{
+      width: 100%;
+      padding: 10px;
+
+      /* left will be container*/
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+  }
+  .right{
+      width: 100%;
+      padding: 10px;
+
+      /* right will be container*/
+      display: flex;
+      justify-content: center;
+      align-items:flex-start;
+      align-content: flex-start;
+      flex-direction: column;
+  }
+  
+}
+
+/* ------------------------ STYLIZE ------------------------ */
+.card{
+  padding: 20px 50px;
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.enginText{
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 1px;
+  
+}
+
+.label{
+  background-color: rgb(100, 38, 199);
+  color: white;
+  padding: 2px 4px;
+  border-radius: 3px;
+  width: 10%;
+  height: 8%;
+  text-align: center;
+}
+
+.saveBtn{
+  flex: 1;
+  align-self: center;
+  border-radius: 60px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  width: 120px;
+  height: 120px;
+  margin:auto;
+  border: none;
+  font-size: 25px;
+}
+
+.button{
+  border: none;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  
+  /* to center it*/
+  flex: 1;
+  margin:auto;
+
+}
+
+.onBtn{
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(19, 160, 165);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  border: none; 
+  font-size: 20px;
+  padding-bottom: 1px;
+  width: 50%;
+
+  /* to center it*/
+  flex: 1;
+  margin:auto;
+}
+/*  ------------------------ slider range ------------------------ */
+.sldr{
+  width: 100%;
+  margin-bottom: 1px; 
+}
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+/* This gives us invisible or unstyled range inputs in all browsers. Now we can apply our custom styles*/
+
+/* Styling the thumb*/
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 23px;
+  width: 10px;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #a8a8a8, 0px 0px 1px #a8a8a8;
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  
+  height: 13px;
+  width: 10px;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  
+  height: 13px;
+  width: 10px;
+  border-radius: 5px;
+  background: #ffffff;
+  cursor: pointer;
+}
+/*Note that while we’re repeating code here, that’s necessary as you can’t comma-separate 
+these type of selectors. Browsers will drop the entire selector if it doesn’t understand a part of it.*/
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: #038fec;
+  border-radius: 3px;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: #04baf1;
+  border-radius: 3px;
+}
+/*  ------------------------ the Switch ------------------------ */
+
+/* The switch - the box around the slider */
+.switch {
+  flex: 1;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin:auto;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #aa0033;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(19, 160, 165);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(19, 160, 165);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+

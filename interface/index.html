@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Robot controllers </title>
+
+        <!-- VIEW PORT: follow the screen-width of the device + initial zoom level when the page is first loaded by the browser -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css" >
+
+        <!-- Google icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    </head>
+    <body>
+ 
+        
+
+            <!-- body -->
+            <div class="bodyContainer">
+                <form class="leftCard  card" action="submit.php" method="post"> <!-- Left card // it will be an inner container -->
+                    <div class="left"> <!-- left -->
+                        <p class="enginText"> First Engine </p> 
+                        <input type="range" min="0" max="180" value="90" class="sldr" id="range1" name="motor1" >
+                        <label name="percent1" id="number1" class="label"></label>
+
+                        <p class="enginText"> Second Engine</p>
+                        <input type="range" min="0" max="180" value="90" class="sldr" id="range2" name="motor2" >
+                        <label name="percent1" id="number2" class="label"></label>
+
+                        <p class="enginText"> Third Engine</p>
+                        <input type="range" min="0" max="180" value="90" class="sldr" id="range3" name="motor3" >
+                        <label name="percent1" id="number3" class="label"></label>
+
+                        <p class="enginText"> fourth Engine</p>
+                        <input type="range" min="0" max="180" value="90" class="sldr" id="range4" name="motor4" >
+                        <label name="percent1" id="number4" class="label"></label>
+
+                        <p class="enginText"> fifth Engine</p>
+                        <input type="range" min="0" max="180" value="90" class="sldr" id="range5" name="motor5" >
+                        <label name="percent1" id="number5" class="label"></label>
+                    </div>
+
+                  
+                        <!-- save button -->
+                        <input type="submit" value="Save" class="saveBtn" name="save">
+
+                        <!-- ON / OFF buttons  -->
+                        <br>
+                     
+                    </div> 
+                        
+                    
+                </form>
+
+                <form class="rightCard card" action="submit.php" method="post"> <!-- Right card-->
+                    
+                  
+    
+                </form>
+            </div>
+
+           
+        <!-- ********************************************* javaScript ********************************************* -->
+    <script>
+        var slider1 = document.getElementById("range1");
+        var output1 = document.getElementById("number1");
+        output1.innerHTML = slider1.value;
+        
+        slider1.oninput = function() {
+          output1.innerHTML = this.value;
+        }
+
+        var slider2 = document.getElementById("range2");
+        var output2 = document.getElementById("number2");
+        output2.innerHTML = slider2.value;
+        
+        slider2.oninput = function() {
+          output2.innerHTML = this.value;
+        }
+
+        var slider3 = document.getElementById("range3");
+        var output3 = document.getElementById("number3");
+        output3.innerHTML = slider3.value;
+        
+        slider3.oninput = function() {
+          output3.innerHTML = this.value;
+        }
+
+        var slider4 = document.getElementById("range4");
+        var output4 = document.getElementById("number4");
+        output4.innerHTML = slider4.value;
+        
+        slider4.oninput = function() {
+        output4.innerHTML = this.value;
+        }
+
+        var slider5 = document.getElementById("range5");
+        var output5 = document.getElementById("number5");
+        output5.innerHTML = slider5.value;
+        
+        slider5.oninput = function() {
+          output5.innerHTML = this.value;
+        }
+
+        
+        </script>
+    </body>
+</html>
